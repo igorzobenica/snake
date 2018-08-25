@@ -43,7 +43,7 @@ int Board::GetContents(const Location & loc) const
 
 void Board::ConsumeContents(const Location & loc)
 {
-	assert(GetContents(loc) == 2);
+	assert(GetContents(loc) == 2 || GetContents(loc) == 3);
 	contents[loc.y * width + loc.x] = 0;
 }
 
@@ -93,6 +93,10 @@ void Board::DrawCells()
 			else if (contents == 2)
 			{
 				DrawCell({ x,y }, foodColor);
+			}
+			else if (contents == 3)
+			{
+				DrawCell({ x,y }, poisonColor);
 			}
 		}
 

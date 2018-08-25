@@ -30,7 +30,7 @@ private:
 	static constexpr int borderPadding = 2;
 	static constexpr int x = 70;
 	static constexpr int y = 50;
-	// 0:empty 1:obstacle 2:food 3:poison 4:speedup
+	// 0:empty 1:obstacle 2:food 3:poison-speedup
 	int contents[width * height] = { 0 };
 	Graphics& gfx;
 };
